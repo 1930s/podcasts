@@ -10,6 +10,9 @@ import UIKit
 
 class MainTabController: UITabBarController {
     
+    
+    // MARK: - UIViewController Methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -17,13 +20,15 @@ class MainTabController: UITabBarController {
         tabBar.tintColor = .purple
         
         viewControllers = [
+            generateNavigationControllers(with: PodcastsSearchController(), title: "Search", image: #imageLiteral(resourceName: "search")),
             generateNavigationControllers(with: ViewController(), title: "Favorites", image: #imageLiteral(resourceName: "favorites")),
-            generateNavigationControllers(with: ViewController(), title: "Search", image: #imageLiteral(resourceName: "search")),
             generateNavigationControllers(with: ViewController(), title: "Downloads", image: #imageLiteral(resourceName: "downloads"))
         ]
     }
     
-    // MARK: - Helper Methods
+    
+    // MARK: - MainTabController Methods
+    
     private func generateNavigationControllers(with rootViewController: UIViewController, title: String, image: UIImage) -> UIViewController {
         let navController = UINavigationController(rootViewController: rootViewController)
         navController.navigationBar.prefersLargeTitles = true

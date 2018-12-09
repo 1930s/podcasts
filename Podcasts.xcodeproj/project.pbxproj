@@ -13,6 +13,10 @@
 		8138A99521BD293500CE2500 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8138A99321BD293500CE2500 /* LaunchScreen.storyboard */; };
 		8138A99D21BD2A8200CE2500 /* _.gitignore_ in Resources */ = {isa = PBXBuildFile; fileRef = 8138A99C21BD2A8200CE2500 /* _.gitignore_ */; };
 		8138A99F21BD2F1500CE2500 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8138A99E21BD2F1500CE2500 /* MainTabBarController.swift */; };
+		81DE5D5B21BD473A0071BB4A /* PodcastsSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DE5D5A21BD473A0071BB4A /* PodcastsSearchController.swift */; };
+		81DE5D5E21BD47D40071BB4A /* Podcast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DE5D5D21BD47D40071BB4A /* Podcast.swift */; };
+		81DE5D6021BD48690071BB4A /* PodcastsSearchController+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DE5D5F21BD48690071BB4A /* PodcastsSearchController+UITableViewDelegate.swift */; };
+		81DE5D6221BD4D6B0071BB4A /* PodcastsSearchController+UISearchBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DE5D6121BD4D6B0071BB4A /* PodcastsSearchController+UISearchBarDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		8138A99621BD293500CE2500 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8138A99C21BD2A8200CE2500 /* _.gitignore_ */ = {isa = PBXFileReference; lastKnownFileType = text; path = _.gitignore_; sourceTree = "<group>"; };
 		8138A99E21BD2F1500CE2500 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		81DE5D5A21BD473A0071BB4A /* PodcastsSearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastsSearchController.swift; sourceTree = "<group>"; };
+		81DE5D5D21BD47D40071BB4A /* Podcast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Podcast.swift; sourceTree = "<group>"; };
+		81DE5D5F21BD48690071BB4A /* PodcastsSearchController+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PodcastsSearchController+UITableViewDelegate.swift"; sourceTree = "<group>"; };
+		81DE5D6121BD4D6B0071BB4A /* PodcastsSearchController+UISearchBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PodcastsSearchController+UISearchBarDelegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,8 @@
 			isa = PBXGroup;
 			children = (
 				8138A98A21BD293400CE2500 /* AppDelegate.swift */,
+				81DE5D5C21BD47C60071BB4A /* Models */,
+				81DE5D5921BD47290071BB4A /* Search */,
 				8138A99E21BD2F1500CE2500 /* MainTabBarController.swift */,
 				8138A98C21BD293400CE2500 /* ViewController.swift */,
 				8138A99121BD293500CE2500 /* Assets.xcassets */,
@@ -65,6 +75,24 @@
 				8138A99621BD293500CE2500 /* Info.plist */,
 			);
 			path = Podcasts;
+			sourceTree = "<group>";
+		};
+		81DE5D5921BD47290071BB4A /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				81DE5D5A21BD473A0071BB4A /* PodcastsSearchController.swift */,
+				81DE5D5F21BD48690071BB4A /* PodcastsSearchController+UITableViewDelegate.swift */,
+				81DE5D6121BD4D6B0071BB4A /* PodcastsSearchController+UISearchBarDelegate.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		81DE5D5C21BD47C60071BB4A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				81DE5D5D21BD47D40071BB4A /* Podcast.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +166,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81DE5D6021BD48690071BB4A /* PodcastsSearchController+UITableViewDelegate.swift in Sources */,
+				81DE5D5B21BD473A0071BB4A /* PodcastsSearchController.swift in Sources */,
 				8138A98D21BD293400CE2500 /* ViewController.swift in Sources */,
 				8138A98B21BD293400CE2500 /* AppDelegate.swift in Sources */,
+				81DE5D6221BD4D6B0071BB4A /* PodcastsSearchController+UISearchBarDelegate.swift in Sources */,
 				8138A99F21BD2F1500CE2500 /* MainTabBarController.swift in Sources */,
+				81DE5D5E21BD47D40071BB4A /* Podcast.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
