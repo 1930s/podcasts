@@ -7,12 +7,24 @@
 //
 
 import UIKit
+import Alamofire
 
 extension PodcastsSearchController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         print(searchText)
         
-        // TODO: Implement Alamofire to searh iTunes API
+        let url = "https://itunes.apple.com/search?term=\(searchText)"
+        
+        Alamofire.request(url).responseData { (dataResponse) in
+            if let error = dataResponse.error {
+                print("Failed to contact yahoo.com", error.localizedDescription)
+                return
+            }
+            
+            guard let data = dataResponse.data else { return }
+            let dataString = String(data: data, encoding: .utf8)
+            print(dataString ?? "")
+        }
     }
 }
